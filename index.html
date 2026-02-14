@@ -1,14 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Git / GitHub Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-top: 1em;
+        }
+    </style>
 </head>
+
 <body>
-    0000022222333333334445555
 
+    <h1>Git / GitHub Notes</h1>
 
+    <h2>1. Основные команды</h2>
+    <ul>
+        <li><code>git init</code> — создать новый локальный репозиторий</li>
+        <li><code>git add .</code> — добавить все изменения в индекс</li>
+        <li><code>git commit -m "сообщение"</code> — зафиксировать изменения</li>
+    </ul>
+
+    <h2>2. Работа с ветками</h2>
+    <ul>
+        <li><code>git branch &lt;branch&gt;</code> — создать новую ветку</li>
+        <li><code>git checkout &lt;branch&gt;</code> — перейти на ветку</li>
+        <li><code>git merge &lt;branch&gt;</code> — смёржить ветку в текущую</li>
+    </ul>
+
+    <h2>3. Удалённый репозиторий</h2>
+    <ul>
+        <li><code>git remote add origin &lt;url&gt;</code> — добавить удалённый репозиторий</li>
+        <li><code>git push -u origin main</code> — отправить изменения</li>
+        <li><code>git pull</code> — получить изменения с удалённого репозитория</li>
+    </ul>
 
 </body>
+
 </html>
