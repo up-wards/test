@@ -7,14 +7,37 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.5;
+            line-height: 1.6;
             padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background-color: #fafafa;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        h2 {
+            margin-top: 2em;
+            color: #333;
+        }
+
+        h3 {
+            margin-top: 1.5em;
+            color: #555;
+        }
+
+        ul {
+            margin-left: 20px;
         }
 
         code {
             background-color: #f4f4f4;
-            padding: 2px 4px;
+            padding: 2px 6px;
             border-radius: 4px;
+            font-family: Consolas, monospace;
         }
 
         pre {
@@ -22,12 +45,7 @@
             padding: 10px;
             border-radius: 4px;
             overflow-x: auto;
-        }
-
-        h1,
-        h2,
-        h3 {
-            margin-top: 1em;
+            font-family: Consolas, monospace;
         }
     </style>
 </head>
@@ -39,22 +57,59 @@
     <h2>1. Основные команды</h2>
     <ul>
         <li><code>git init</code> — создать новый локальный репозиторий</li>
-        <li><code>git add .</code> — добавить все изменения в индекс</li>
-        <li><code>git commit -m "сообщение"</code> — зафиксировать изменения</li>
+        <li><code>git add .</code> — добавить все изменения в индекс (staging)</li>
+        <li><code>git commit -m "сообщение"</code> — зафиксировать изменения локально</li>
+        <li><code>git status</code> — посмотреть статус репозитория</li>
     </ul>
 
     <h2>2. Работа с ветками</h2>
     <ul>
         <li><code>git branch &lt;branch&gt;</code> — создать новую ветку</li>
-        <li><code>git checkout &lt;branch&gt;</code> — перейти на ветку</li>
-        <li><code>git merge &lt;branch&gt;</code> — смёржить ветку в текущую</li>
+        <li><code>git checkout &lt;branch&gt;</code> — переключиться на ветку</li>
+        <li><code>git merge &lt;branch&gt;</code> — слить ветку в текущую</li>
+        <li><code>git branch -d &lt;branch&gt;</code> — удалить локальную ветку</li>
     </ul>
 
-    <h2>3. Удалённый репозиторий</h2>
+    <h2>3. Удалённый репозиторий (GitHub)</h2>
     <ul>
-        <li><code>git remote add origin &lt;url&gt;</code> — добавить удалённый репозиторий</li>
-        <li><code>git push -u origin main</code> — отправить изменения</li>
-        <li><code>git pull</code> — получить изменения с удалённого репозитория</li>
+        <li><code>git remote add origin &lt;url&gt;</code> — подключить удалённый репозиторий</li>
+        <li><code>git push -u origin main</code> — отправить локальные коммиты на GitHub</li>
+        <li><code>git pull</code> — забрать изменения с GitHub</li>
+        <li><code>git clone &lt;url&gt;</code> — склонировать репозиторий с GitHub</li>
+    </ul>
+
+    <h2>4. Исправление ошибок</h2>
+    <ul>
+        <li><code>git reset --soft HEAD~1</code> — отменить последний коммит, оставить изменения в staging</li>
+        <li><code>git reset HEAD &lt;file&gt;</code> — убрать файл из staging</li>
+        <li><code>git checkout -- &lt;file&gt;</code> — отменить изменения файла до последнего коммита</li>
+    </ul>
+
+    <h2>5. Практические примеры</h2>
+    <pre>
+# Создание репозитория и первый коммит
+git init
+git add .
+git commit -m "Первый коммит"
+git remote add origin https://github.com/username/test.git
+git push -u origin main
+</pre>
+
+    <pre>
+# Создание и переключение веток
+git branch feature
+git checkout feature
+git add .
+git commit -m "Работа над фичей"
+git checkout main
+git merge feature
+</pre>
+
+    <h2>6. Советы</h2>
+    <ul>
+        <li>Старайся делать коммиты маленькими и осмысленными.</li>
+        <li>Проверяй статус с <code>git status</code> перед коммитом.</li>
+        <li>Используй GitHub Pages, чтобы визуально проверять HTML-документы.</li>
     </ul>
 
 </body>
