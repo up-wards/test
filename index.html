@@ -68,6 +68,7 @@
         <li><code>git checkout &lt;branch&gt;</code> — переключиться на ветку</li>
         <li><code>git merge &lt;branch&gt;</code> — слить ветку в текущую</li>
         <li><code>git branch -d &lt;branch&gt;</code> — удалить локальную ветку</li>
+        <li><code>git branch -M master</code> — переименовать ветку в master</li>
     </ul>
 
     <h2>3. Удалённый репозиторий (GitHub)</h2>
@@ -85,13 +86,15 @@
         <li><code>git checkout -- &lt;file&gt;</code> — отменить изменения файла до последнего коммита</li>
     </ul>
     <h2>5. Алиасы</h2>
-    <p></p>
+    <p>Прописываем в C:\Users\Up wards\.gitconfig</p>
+    <p>Добавляем раздел [alias], и через TAB пишем:</p>
     <ul>
-        <li><code></code></li>
-        <li><code></code></li>
-        <li><code></code></li>
-        <li><code></code></li>
-        <li><code></code></li>
+        <li><code>s = status --short</code></li>
+        <li><code>l = log --oneline --graph --decorate --all</code></li>
+        <li><code>g = log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)'</code>
+        </li>
+        <li><code>b = branch</code></li>
+        <li><code>c = checkout</code></li>
         <li><code></code></li>
     </ul>
     <h2>6. Практические примеры</h2>
